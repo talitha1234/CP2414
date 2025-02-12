@@ -24,7 +24,7 @@ You need 2 or 3 players
 Task 3
 Write a string into a file
 You need 0.5 player
-
+    
 Task 4
 Generate the salt (random number)
 Consider Python’s random.uniform() method
