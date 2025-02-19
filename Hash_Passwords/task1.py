@@ -9,11 +9,9 @@ import random
 
 MIN_LENGTH = 8
 MAX_LENGTH = 20
-UPPER = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-         'W', 'X', 'Y', 'Z']
-LOWER = [letter.lower() for letter in UPPER]
+UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+LOWER = UPPER.lower()
 SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
-
 password = ''
 password_length = random.randint(MIN_LENGTH, MAX_LENGTH)
 
