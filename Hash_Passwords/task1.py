@@ -9,13 +9,17 @@ import random
 
 MIN_LENGTH = 8
 MAX_LENGTH = 20
-UPPER = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-LOWER = [letter.lower() for letter in UPPER]
+UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+LOWER = UPPER.lower()
 SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
-
-
-password = []
+password = ''
 password_length = random.randint(MIN_LENGTH, MAX_LENGTH)
-print(password_length)
 
-password.append(random.choice())
+# Add in most lowercase letters
+for character in range(password_length - 2):
+    password += (random.choice(LOWER))
+
+# Add in one Upper case letter and one special character
+password += (random.choice(UPPER))
+password += (random.choice(SPECIAL_CHARACTERS))
+print(password)
