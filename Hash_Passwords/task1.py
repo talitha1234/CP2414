@@ -12,14 +12,18 @@ MAX_LENGTH = 20
 UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 LOWER = UPPER.lower()
 SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
-password = ''
-password_length = random.randint(MIN_LENGTH, MAX_LENGTH)
 
-# Add in most lowercase letters
-for character in range(password_length - 2):
-    password += (random.choice(LOWER))
 
-# Add in one Upper case letter and one special character
-password += (random.choice(UPPER))
-password += (random.choice(SPECIAL_CHARACTERS))
-print(password)
+def generate_password():
+    password = ''
+    password_length = random.randint(MIN_LENGTH, MAX_LENGTH)
+    # Add in most lowercase letters
+    for character in range(password_length - 2):
+        password += (random.choice(LOWER))
+    # Add in one Upper case letter and one special character
+    password += (random.choice(UPPER))
+    password += (random.choice(SPECIAL_CHARACTERS))
+
+
+generate_password()
+# print(password)
