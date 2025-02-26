@@ -1,3 +1,24 @@
+Finish Week3 and Week4’s work
+• Week 3: No need to implement the hash function yourself, just call the
+Python library – hashlib
+• Week 4: Replace your Week 3’s hash with Caesar cipher and DES
+• Implement Caesar yourself
+• Call Python library - PyCryptodome for DES
+
+This week (groups of three):
+• Implement the secret value-based hash function by yourself
+• You may also call any existing hash function (taking only one input – message), e.g.,
+SHA-512
+• The secret value should be random with a given length (think about the maximum
+length in line with the accepted length of the hash function)
+• Note: the secret value is shared by the user and the server!
+• Call Python Library to implement RSA then Replace DES with RSA
+• There is a Python library for RSA
+• Install: pip install rsa
+• Documentation: read and self-taught
+
+
+
 Accept users registration
 Provide options for computer-generated passwords (Task 1)
 Proactively check users’ own passwords (Task 2)
