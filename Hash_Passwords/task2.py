@@ -27,13 +27,12 @@ def main():
     is_valid_password(password)
 
 
-
 def is_valid_password(password):
     """Determine if the provided password is valid."""
 
     secure = True
     while secure:
-        length=len(password)
+        length = len(password)
 
         if length < MIN_LENGTH or length > MAX_LENGTH:
             print("Your password must be between", MIN_LENGTH, "and", MAX_LENGTH)
@@ -50,18 +49,18 @@ def is_valid_password(password):
                 count_upper += 1
             if char.islower():
                 count_lower += 1
-            if  char in NUMBER_CHARACTERS:
+            if char in NUMBER_CHARACTERS:
                 count_digit += 1
 
         if count_upper & count_lower & count_digit & count_special >= 1:
             print('vaild password')
-            break
-        if count_upper or count_lower or count_special or count_digit <= 0:
-            print('invaild password')
-            break
+            return True
+        else:
+            print("Invalid Password")
+            return False
 
 
-        return True
 
 
-main()
+if __name__ == "__main__":
+    main()

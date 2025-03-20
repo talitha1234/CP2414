@@ -5,13 +5,21 @@ You need 0.5 player
 """
 
 
+def main():
+    username = "JC261777"
+    hashed_password = 'GeekPassword'
+    salt = "123"
 
-def write_pw_to_file():
-    password = 'GeekPassword'
+    write_pw_to_file(username, hashed_password, salt)
+
+
+def write_pw_to_file(username, hashed_password, salt):
     password_file = "pwfile"
     in_file = open(password_file, 'w')
-    print(password, file=in_file)
+    print(username + '\n' + hashed_password + '\n' + salt, file=in_file)
     in_file.close()
 
 
-write_pw_to_file()
+if __name__ == "__main__":
+    main()
+
